@@ -10,8 +10,9 @@ setup(name='tap-zendesk',
       classifiers=['Programming Language :: Python :: 3 :: Only'],
       py_modules=['tap_zendesk'],
       install_requires=[
-          'singer-python==5.9.0',
-          'zenpy==2.0.22',
+          'singer-python @ git+ssh://git@github.com/hz-lschick/singer-python.git', #==5.9.0',
+          'zenpy @ git+ssh://git@github.com/Horze-International/zenpy.git@master', #==2.0.22',
+          'pytz==2018.9',
       ],
       dependency_links=[
           'git+ssh://git@github.com/hz-lschick/singer-python.git#egg=singer-python-5.9.0', # ==5.9.0 + not enforce specific version of pytz package
