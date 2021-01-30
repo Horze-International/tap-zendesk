@@ -11,12 +11,11 @@ setup(name='tap-zendesk',
       py_modules=['tap_zendesk'],
       install_requires=[
           'singer-python @ git+ssh://git@github.com/hz-lschick/singer-python.git', #==5.9.0',
-          'zenpy @ git+ssh://git@github.com/Horze-International/zenpy.git@master', #==2.0.22',
+          'zenpy==2.0.23',
           'pytz==2018.9',
       ],
       dependency_links=[
           'git+ssh://git@github.com/hz-lschick/singer-python.git#egg=singer-python-5.9.0', # ==5.9.0 + not enforce specific version of pytz package
-          'git+ssh://git@github.com/Horze-International/zenpy.git@master#egg=zenpy-2.0.22', # ==2.0.22 + branch 'NiallRees:add_incremental_calls_api' merged
       ],
       extras_require={
           'dev': [
